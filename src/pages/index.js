@@ -6,41 +6,12 @@ import { RiTeamLine } from 'react-icons/ri';
 import { FaBookmark } from 'react-icons/fa';
 import ProfileSummary from '@/components/profileSummary';
 import GroupsList from '@/components/groupsList';
+import JOBS from '@/dummy-data/job-list';
+import GROUPS from '@/dummy-data/group-list';
+import JobsList from '@/components/jobsList';
 
 const inter = Inter({ subsets: ['latin'] })
 
-const jobs = [
-  {
-    title: 'Js',
-    company: 'ihdw',
-    location: 'erferg',
-    posted: '2hr ago'
-  },
-  {
-    title: 'Js',
-    company: 'ihdw',
-    location: 'erferg',
-    posted: '2hr ago'
-  },
-  {
-    title: 'Js',
-    company: 'ihdw',
-    location: 'erferg',
-    posted: '2hr ago'
-  },
-  {
-    title: 'Js',
-    company: 'ihdw',
-    location: 'erferg',
-    posted: '2hr ago'
-  },
-  {
-    title: 'Js',
-    company: 'ihdw',
-    location: 'erferg',
-    posted: '2hr ago'
-  },
-]
 export default function Home() {
   return (
     <>
@@ -54,107 +25,32 @@ export default function Home() {
       }}>
 
         <div style={{
-          display:'flex',
-          flexDirection:'column',
-          gap:'8px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px',
         }}>
-          <ProfileSummary/>
+          <ProfileSummary />
 
-         <GroupsList/>
+          <GroupsList data={GROUPS}/>
         </div>
-       
+
 
 
         <main style={{
-          background: 'white',
-          borderRadius: '8px',
-          padding: '20px 16px 0px 16px',
+          
+          // padding: '20px 0px 0px 0px',given this to children
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px',
         }}>
 
-          <h2 style={{
-            fontSize: '18px',
-            lineHeight: '14px'
-          }}>Recommended for you</h2>
-          <p style={{
-            fontSize: '14px',
-            lineHeight: '8px'
-          }}>Based on your profile and search history</p>
+         <JobsList data={JOBS.slice(0, 3)}
+          title="Recommended for you"
+         subtitle='Based on your profile and search history'/>
 
-          {jobs?.map((j, i) => {
-            return <div key={i} style={{
-              marginTop: '16px',
-              display: 'grid',
-              gridTemplateColumns: '1fr 8fr 1fr',
-              // gridTemplateRows: '1fr 1fr',
-              borderBottom: '1px solid #eeedea',
-              paddingBottom: '8px'
-            }}>
-
-              <div style={{}}>
-
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  // gridColumn: 1 / 2,
-                  padding: '8px '
-                }}>
-                  <img src='https://media.licdn.com/dms/image/C560BAQG6KMZp1zAiTA/company-logo_100_100/0/1578021573435?e=1700092800&v=beta&t=VQgH-gRrIviYOcsGq_QQCTOuJnSRYDPQ_ly_a-IR3Lw' alt='logo' style={{
-                    //  objectFit: 'cover',
-                    width: '100%',
-                    maxHeight: '100%'
-                  }} />
-                </div>
-
-              </div>
-
-              <div style={{}}>
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <h3 style={{
-                    fontSize: '16px',
-                    lineHeight: '8px',
-                    color: 'blue'
-                  }}>React Js Developer </h3>
-                  <p style={{
-                    fontSize: '14px',
-                    lineHeight: '20px'
-                  }}>Uplers</p>
-                  <p style={{
-                    fontSize: '14px',
-                    lineHeight: '20px'
-                  }}>India (Remote)</p>
-
-                  <p style={{
-                    fontSize: '12px',
-                    color: 'green',
-                    lineHeight: '20px',
-                    fontWeight: 500,
-                    marginTop: '16px'
-                  }}>3 hrs ago</p>
-                </div>
-              </div>
-
-
-              <div style={{}}>
-
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  // gridColumn: 1 / 2,
-                  width: '70%', height: '70%',
-                  padding: '8px '
-                }}>
-                  <img src='https://cdn.icon-icons.com/icons2/3138/PNG/512/bookmark_save_storage_basic_icon_192482.png' alt='logo' style={{
-                    //  objectFit: 'cover',
-                    width: '100%',
-                    maxHeight: '100%'
-                  }} />
-                </div>
-
-              </div>
-            </div>
-          })
-          }
-
+         <JobsList data={JOBS.slice(3, 6)}
+          title="Still Hiring"
+          subtitle='Jobs you may have missed'/>
         </main>
 
 

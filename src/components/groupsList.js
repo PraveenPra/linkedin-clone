@@ -2,45 +2,7 @@ import React from 'react'
 
 import { RiTeamLine } from 'react-icons/ri';
 
-
-const DATA = [
-    {
-        text: 'UI/UX User experience'
-    },
-    {
-        text: 'Frontend Development Community'
-    },
-    {
-        text: 'Product Design Enthusiasts'
-    },
-    {
-        text: 'Data Science and Analytics Forum'
-    },
-    {
-        text: 'Software Engineering Network'
-    },
-    {
-        text: 'Digital Marketing Professionals'
-    },
-    {
-        text: 'AI and Machine Learning Enthusiasts'
-    },
-    {
-        text: 'Entrepreneurship & Startups'
-    },
-    {
-        text: 'Graphic Design Creative Hub'
-    },
-    {
-        text: 'Healthcare Innovators Network'
-    },
-    {
-        text: 'Finance and Investment Professionals'
-    }
-];
-
-
-function GroupsList() {
+function GroupsList({data}) {
     return (
         <section style={{
             background: 'white',
@@ -51,7 +13,7 @@ function GroupsList() {
         }}>
             <p className='pbold' style={{paddingLeft:'16px'}}>Recent</p>
 
-            {DATA?.map((item, i) => {
+            {data?.map((item, i) => {
                 return <div key={i} style={{ padding: '4px 16px', display: 'flex', gap: '8px', alignItems: 'center', }}>
                     <RiTeamLine style={{ width: '14px', height: '14px', color: '#5e5e5e' }} />
                     <a className='alight' style={{
