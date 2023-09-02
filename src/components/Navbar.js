@@ -1,13 +1,15 @@
 import React from 'react'
 import InputField from './InputField'
 
+import { BiSolidHome } from 'react-icons/bi';
+import { FaUserGroup,FaBell } from 'react-icons/fa';
 
 
 const icons = [
-    { url: 'https://cdn.icon-icons.com/icons2/1659/PNG/512/3844435-home-house_110321.png', title: 'Home' },
-    { url: 'https://cdn.icon-icons.com/icons2/1812/PNG/512/4213454-connections-media-network-share-social-structure_115377.png', title: 'My Network' },
-    { url: 'https://cdn.icon-icons.com/icons2/2346/PNG/512/bell_alarm_icon_142909.png', title: 'Notifications' },
-    { url: 'https://cdn.icon-icons.com/icons2/656/PNG/512/mail_email_message_electronic_online_web_icon-icons.com_59986.png', title: 'Messages' },
+    { icon: <BiSolidHome/>, title: 'Home' },
+    { icon: <BiSolidHome/>, title: 'My Network' },
+    { icon: <BiSolidHome/>, title: 'Notifications' },
+    { icon: <BiSolidHome/>, title: 'Messages' },
   ]
   
 const Navbar = () => {
@@ -41,7 +43,7 @@ const Navbar = () => {
         <InputField />
         </div>
         
-        {icons?.map((icon, i) => {
+        {icons?.map((item, i) => {
           return (<div style={{
             display: 'flex',
             flexDirection: 'column',
@@ -52,17 +54,13 @@ const Navbar = () => {
           }} key={i}>
 
             <div style={{ width: '20px', height: '20px' }}>
-              <img src={icon.url} alt='logo' style={{
-                 objectFit: 'contain',
-                width: '100%',
-                height: '100%',
-              }} />
+             {item?.icon}
             </div>
             <p style={{
               fontSize: '12px',
               fontWeight:400,
               color:'#666666'
-            }}>{icon.title}</p>
+            }}>{item.title}</p>
           </div>)
         })}
       </nav>
