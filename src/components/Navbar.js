@@ -2,14 +2,16 @@ import React from 'react'
 import InputField from './InputField'
 
 import { BiSolidHome } from 'react-icons/bi';
-import { FaUserGroup,FaBell } from 'react-icons/fa';
-
+import { FaUserGroup,FaBriefcase } from 'react-icons/fa6';
+import {HiChatBubbleLeftEllipsis} from 'react-icons/hi2';
+import { FaBell } from 'react-icons/fa';
 
 const icons = [
     { icon: <BiSolidHome/>, title: 'Home' },
-    { icon: <BiSolidHome/>, title: 'My Network' },
-    { icon: <BiSolidHome/>, title: 'Notifications' },
-    { icon: <BiSolidHome/>, title: 'Messages' },
+    { icon: <FaUserGroup/>, title: 'My Network' },
+    { icon: <FaBriefcase/>, title: 'Jobs' },
+    { icon: <HiChatBubbleLeftEllipsis/>, title: 'Messaging' },
+    { icon: <FaBell/>, title: 'Notifications' },
   ]
   
 const Navbar = () => {
