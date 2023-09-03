@@ -2,7 +2,7 @@ import React from 'react'
 
 import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
-import {  FaUserAlt } from 'react-icons/fa';
+import EmptyAvatar from './ImageComponents/emptyAvatar';
 
 function AsideJobs({title,actionTitle,btnText,description}) {
   return (
@@ -22,12 +22,7 @@ function AsideJobs({title,actionTitle,btnText,description}) {
               color: '#333', flex: 1
             }}>{actionTitle}</h3>
 
-            <div style={{
-              padding: '8px', background: '#e7e2dc', borderRadius: '100%', width: '50px', height: '50px', display: 'flex',
-              justifyContent: 'center', alignItems: 'center',
-            }}>
-              <FaUserAlt style={{ fontSize: '24px', color: '#788fa5' }} />
-            </div>
+           <EmptyAvatar/>
           </div>
 
           <p className='plight' style={{ padding: '8px 16px',color:'#000' }}>{description}

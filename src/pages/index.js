@@ -1,6 +1,5 @@
 import { Inter } from 'next/font/google'
 import sx from '@/styles/Home.module.css'
-import InputField from '@/components/InputField'
 import Navbar from '@/components/Navbar'
 import { RiTeamLine } from 'react-icons/ri';
 import { FaBookmark, FaUserAlt } from 'react-icons/fa';
@@ -12,6 +11,9 @@ import JobsList from '@/components/jobsList';
 import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
 import AsideJobs from '@/components/asideJobs';
+import EmptyAvatar from '@/components/ImageComponents/emptyAvatar';
+import CreatePost from '@/components/createPost';
+import PostInputField from '@/components/InputComponents/postInputField';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -46,7 +48,16 @@ export default function Home() {
           flexDirection: 'column',
           gap: '8px',
         }}>
+          <div style={{
+           background: '#fff', padding: '16px', borderRadius: '8px', width: '100%',
+            border: '1px solid rgba(140, 140, 140,0.3)',
+          }}>
+            
+              <PostInputField />
+            
+                        <CreatePost />
 
+          </div>
           <JobsList data={JOBS.slice(0, 3)}
             title="Recommended for you"
             subtitle='Based on your profile and search history' />
@@ -58,21 +69,21 @@ export default function Home() {
 
 
         <aside style={{
-           display: 'flex',
-           flexDirection: 'column',
-           gap: '8px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px',
         }}>
-        <AsideJobs 
-         title="Open to work"
-         actionTitle="Show recruiters you are open to job opportunities"
-         description="Get better job recommendations when you are #OpenToWork - you control who sees this."
-         btnText="Get started"/>
+          <AsideJobs
+            title="Open to work"
+            actionTitle="Show recruiters you are open to job opportunities"
+            description="Get better job recommendations when you are #OpenToWork - you control who sees this."
+            btnText="Get started" />
 
-         <AsideJobs 
-         title="Job seeker guidance"
-         actionTitle="I want to improve my resume"
-         description="Explore our curated guide of expert-led courses, such as how to improve your resume and grow your network, to help you land your next opportunity."
-         btnText="Show more"/>
+          <AsideJobs
+            title="Job seeker guidance"
+            actionTitle="I want to improve my resume"
+            description="Explore our curated guide of expert-led courses, such as how to improve your resume and grow your network, to help you land your next opportunity."
+            btnText="Show more" />
         </aside>
 
       </div>
