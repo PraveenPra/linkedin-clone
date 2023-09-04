@@ -10,14 +10,17 @@ import { useRouter } from 'next/router'
 
 const icons = [
     { icon: <BiSolidHome/>, title: 'Home' ,link:'/'},
-    { icon: <FaUserGroup/>, title: 'My Network' ,link:'/'},
+    { icon: <FaUserGroup/>, title: 'My Network' ,link:'/my-network'},
     { icon: <FaBriefcase/>, title: 'Jobs' ,link:'/jobs'},
-    { icon: <HiChatBubbleLeftEllipsis/>, title: 'Messaging',link:'/' },
-    { icon: <FaBell/>, title: 'Notifications' ,link:'/'},
+    { icon: <HiChatBubbleLeftEllipsis/>, title: 'Messaging',link:'/messaging' },
+    { icon: <FaBell/>, title: 'Notifications' ,link:'/notifications'},
   ]
   
 const Navbar = () => {
   const router = useRouter()
+  
+  const isActive = (link) => router.pathname === link;
+
   return (
     <nav style={{
         background: '#ffffff',
@@ -52,22 +55,27 @@ const Navbar = () => {
         </div>
         
         {icons?.map((item, i) => {
+          const isActiveLink = isActive(item.link);
           return (<div style={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             gridColumn: 'span 2',
-            borderBottom:i === 0 ? '2px solid black' : 'none',
-          }} key={i} onClick={()=>router.push(item?.link)}>
+            borderBottom:isActiveLink  ? '2px solid black' : 'none',
+            cursor: 'pointer',
+          }} 
+          key={i} 
+          onClick={()=>router.push(item?.link)}
+          >
 
-            <div style={{ width: '20px', height: '20px' }}>
+            <div style={{ width: '20px', height: '20px', color: isActiveLink ? 'black' : '#666666', }}>
              {item?.icon}
             </div>
             <p style={{
               fontSize: '12px',
               fontWeight:400,
-              color:'#666666'
+              color: isActiveLink ? 'black' : '#666666',
             }}>{item.title}</p>
           </div>)
         })}
