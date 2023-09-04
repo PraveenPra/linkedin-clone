@@ -6,6 +6,8 @@ import JobsList from '@/components/jobsList'
 import React from 'react'
 import JOBS from '@/dummy-data/job-list';
 import IconMenu from '@/components/MenuComponents/iconMenu'
+import { BiEdit } from 'react-icons/bi'
+import InputField from '@/components/InputComponents/inputField'
 
 function Jobs() {
   return (  <>
@@ -24,6 +26,11 @@ function Jobs() {
         gap: '8px',
       }}>
         <IconMenu/>
+
+<section>
+    <InputField placeholder='Post a free job' icon={ <BiEdit color='#0a66c2'/>}/>
+</section>
+       
         {/* <ProfileSummary />
 
         <GroupsList data={GROUPS} /> */}

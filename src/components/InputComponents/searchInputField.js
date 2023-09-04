@@ -1,7 +1,7 @@
 import React from 'react'
-import sx from './InputField.module.css'
+import sx from './searchInputField.module.css'
 
-const InputField = () => {
+const SearchInputField = () => {
     return (
 
         <div className={sx.wrapper}>
@@ -22,4 +22,4 @@ const InputField = () => {
     )
 }
 
-export default InputField
+export default SearchInputField
