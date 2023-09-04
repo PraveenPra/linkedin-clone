@@ -26,7 +26,7 @@ export default function Home() {
         display: 'grid',
         gridTemplateColumns: '225px auto 275px',
         gridGap: '24px',
-
+        paddingTop: '53px',
       }}>
 
         <div style={{
