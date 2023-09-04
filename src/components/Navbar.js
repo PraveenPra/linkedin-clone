@@ -22,8 +22,10 @@ const Navbar = () => {
         height: '53px',
         display: 'grid',
         gridTemplateColumns: ' repeat(24, 1fr)',
-        // '53px 412px 52px 52px 52px 52px ',
-        // gridTemplateRows: '1fr '
+        position:'fixed',
+        top:0,
+        left:0,
+        right:0,
       }}>
 
 

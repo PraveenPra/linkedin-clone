@@ -10,30 +10,33 @@ import { BiEdit } from 'react-icons/bi'
 import InputField from '@/components/InputComponents/inputField'
 
 function Jobs() {
-  return (  <>
+  return (<>
     <Navbar />
     <div style={{
       margin: '24px 118px',
       display: 'grid',
       gridTemplateColumns: '225px auto 275px',
       gridGap: '24px',
-
+      paddingTop: '53px',
     }}>
 
       <div style={{
         display: 'flex',
         flexDirection: 'column',
         gap: '8px',
+
       }}>
-        <IconMenu/>
+        <div style={{
+          position:'fixed',
 
-<section>
-    <InputField placeholder='Post a free job' icon={ <BiEdit color='#0a66c2'/>}/>
-</section>
-       
-        {/* <ProfileSummary />
+        }}>
+          <IconMenu />
 
-        <GroupsList data={GROUPS} /> */}
+          <section style={{marginTop:'16px'}}>
+            <InputField placeholder='Post a free job' icon={<BiEdit color='#0a66c2' />} />
+          </section>
+        </div>
+
       </div>
 
 
@@ -46,13 +49,13 @@ function Jobs() {
         gap: '8px',
       }}>
         <div style={{
-         background: '#fff', padding: '16px', borderRadius: '8px', width: '100%',
+          background: '#fff', padding: '16px', borderRadius: '8px', width: '100%',
           border: '1px solid rgba(140, 140, 140,0.3)',
         }}>
-          
-            <PostInputField />
-          
-                      <CreatePost />
+
+          <PostInputField />
+
+          <CreatePost />
 
         </div>
         <JobsList data={JOBS.slice(0, 3)}
