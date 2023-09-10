@@ -68,3 +68,9 @@ a{
     /* font-weight:600;   */
     color:rgba(0,0,0,0.6);
 }
+
+.ptiny{
+    font-size:10px;
+    line-height:12px;
+    color:rgba(0,0,0,0.6);
+}

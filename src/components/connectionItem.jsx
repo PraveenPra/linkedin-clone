@@ -2,6 +2,7 @@ import React from 'react'
 import {  CgUserAdd } from 'react-icons/cg';
 import BanneredImage from './ImageComponents/banneredImage';
 import EmptyAvatar from './ImageComponents/emptyAvatar';
+import { TbCurlyLoop } from 'react-icons/tb';
 
 function ConnectionItem() {
   return (<div style={{
@@ -24,8 +25,9 @@ function ConnectionItem() {
       alignItems:'center',
       justifyContent:'flex-start'
     }}>
-      <EmptyAvatar size={24}/>
-      <p style={{ textAlign:'left' }} className='plight'>13 mutual connections</p>
+      {/* <EmptyAvatar size={24}/> */}
+      <TbCurlyLoop color='rgba(0,0,0,0.4)'/>
+      <p style={{ textAlign:'left' }} className='ptiny'>13 mutual connections</p>
     </div>
     <button style={{
       display:'flex',
