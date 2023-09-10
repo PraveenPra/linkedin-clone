@@ -7,7 +7,7 @@ function TwoColumnLayout({ first, second}) {
     <div style={{
         margin: '24px 118px',
         display: 'grid',
-        gridTemplateColumns: '300px 804px',
+        gridTemplateColumns: '265px auto',
         gridGap: '24px',
         paddingTop: '53px',
     }}>

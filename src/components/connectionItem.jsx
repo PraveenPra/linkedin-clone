@@ -7,7 +7,7 @@ function ConnectionItem() {
   return (<div style={{
     background: 'white',
     borderRadius: '8px',
-    padding: '10px 0 10px 0',
+    // padding: '10px 0 10px 0',
     width: '100%',
     border: '1px solid rgba(140, 140, 140,0.3)',
     textAlign:'center'
@@ -38,13 +38,14 @@ function ConnectionItem() {
       borderRadius:'100px',
       margin:'4px 16px 8px 16px'
     }}>
-      <span>
+      <span >
         <CgUserAdd style={{
       fontSize: '1em',
-      color: '#0a66c2'
+      color: '#0a66c2',
+      fontWeight:600
     }} />
       </span>
-      <p style={{color:'#0a66c2'}}>Connect</p>
+      <p style={{color:'#0a66c2'}} className='pbold'>Connect</p>
     </button>
   </div>)
 }

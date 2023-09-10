@@ -31,7 +31,7 @@ MyNetwork.getLayout = function getLayout(page) {
     background: 'white',
     borderRadius: '8px',
     padding: '10px 16px 10px 16px',
-    width: '100%',
+    // width: '100%',
     border: '1px solid rgba(140, 140, 140,0.3)',
     display:'grid',
     gap:'8px',
