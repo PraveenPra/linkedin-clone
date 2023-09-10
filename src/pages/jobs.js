@@ -21,8 +21,9 @@ export default Jobs
 Jobs.getLayout = function getLayout(page) {
 
   const first = <div style={{
-    position: 'fixed',
-
+    // position: 'fixed',
+    position: 'sticky',
+    top: 68,
   }}>
     <IconMenu />
 

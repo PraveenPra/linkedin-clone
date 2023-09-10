@@ -20,7 +20,9 @@ export default MyNetwork
 MyNetwork.getLayout = function getLayout(page) {
 
   const first = <div style={{
-    position: 'fixed',
+    // position: 'fixed',
+    position: 'sticky',
+    top: 0,
   }}>
     <IconMenu />
   </div>;

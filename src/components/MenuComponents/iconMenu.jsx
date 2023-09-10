@@ -10,6 +10,7 @@ function IconMenu() {
             padding: '10px 0 10px 0',
             width: '100%',
             border: '1px solid rgba(140, 140, 140,0.3)',
+            
         }}>
             {ICONMENU?.map((item,i)=>{
                 return (
