@@ -4,7 +4,9 @@ import BanneredImage from './ImageComponents/banneredImage';
 import EmptyAvatar from './ImageComponents/emptyAvatar';
 import { TbCurlyLoop } from 'react-icons/tb';
 
-function ConnectionItem() {
+function ConnectionItem({data}) {
+  const {name,role,mutualConnections,profileImage} = data
+
   return (<div style={{
     background: 'white',
     borderRadius: '8px',
@@ -13,10 +15,10 @@ function ConnectionItem() {
     border: '1px solid rgba(140, 140, 140,0.3)',
     textAlign:'center'
   }}>
-    <BanneredImage />
+    <BanneredImage url={profileImage}/>
 
-    <h3 style={{ padding: '0px 16px' }}>Aditya R</h3>
-    <p style={{ padding: '0px 16px' }} className='plight'>AI Intern</p>
+    <h3 style={{ padding: '0px 16px' }}>{name}</h3>
+    <p style={{ padding: '0px 16px' }} className='plight'>{role}</p>
 
     <div style={{
       padding: '8px 16px 4px 16px',
@@ -27,7 +29,7 @@ function ConnectionItem() {
     }}>
       {/* <EmptyAvatar size={24}/> */}
       <TbCurlyLoop color='rgba(0,0,0,0.4)'/>
-      <p style={{ textAlign:'left' }} className='ptiny'>13 mutual connections</p>
+      <p style={{ textAlign:'left' }} className='ptiny'>{mutualConnections} mutual connections</p>
     </div>
     <button style={{
       display:'flex',

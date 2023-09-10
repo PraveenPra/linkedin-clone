@@ -2,7 +2,7 @@ import React from 'react'
 
 import {  FaUserAlt } from 'react-icons/fa';
 
-function BanneredImage() {
+function BanneredImage({url}) {
   return (<div style={{
 
     position: 'relative',
@@ -26,7 +26,7 @@ function BanneredImage() {
       gridColumn: 2,
       transform: 'translate(20%,20%)',
       background: '#f5f7f9',
-      padding: '1em',
+      padding:  url == undefined && '1em',//if no image then use icon
       color: 'black',
       borderRadius: '100%',
       display: 'flex',
@@ -36,10 +36,17 @@ function BanneredImage() {
       height: '4em',
       border: '2px solid white'
     }}>
-      <FaUserAlt style={{
-        fontSize: '2em',
-        color: 'black'
-      }} />
+     {url !== undefined ?
+      <img src={url} alt='profile-pik' style={{
+        width:'100%',
+        height:'100%',
+        borderRadius:'100px'
+      }}/> 
+      : 
+     <FaUserAlt style={{
+      fontSize: '2em',
+      color: 'black'
+    }} />} 
     </div>
 
     <div style={{

@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Ubuntu:wght@300&family=Work+Sans:wght@400;600;700;800&display=swap');
 
 root:{
-    --borderCol:rgb(140, 140, 140);
+    --col-primary:#0075b4;
+    --col-bg:#f3f2ef;
+    --col-on-bg:#fff;
+    --col-border:rgb(140, 140, 140);
 }
 
 html,body{
@@ -73,4 +76,21 @@ a{
     font-size:10px;
     line-height:12px;
     color:rgba(0,0,0,0.6);
+}
+
+//colors
+.col-pri{
+    color:var(--col-primary);
+}
+
+.col-bg{
+    color:var(--col-bg);
+}
+
+.col-on-bg{
+    color:var(--col-on-bg);
+}
+
+.col-border{
+    color:var(--col-border);
 }
