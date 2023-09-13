@@ -94,3 +94,16 @@ a{
 .col-border{
     color:var(--col-border);
 }
+
+//helpers
+.center{
+    display:flex;
+    justifyContent:center;
+    alignItems:center;
+}
+
+.justify-between{
+    display:flex;
+    justifyContent:space-between;
+    alignItems:center;
+}

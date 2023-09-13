@@ -22,78 +22,91 @@ const connectionData = [
     role: "AI Intern",
     mutualConnections: 13,
     profileImage: "https://source.unsplash.com/random/200x200/?profile&1",
+    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "John Doe",
     role: "Software Engineer",
     mutualConnections: 8,
     profileImage: "https://source.unsplash.com/random/200x200/?profile&2",
+    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Jane Smith",
     role: "Data Scientist",
     mutualConnections: 5,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
+    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Michael Johnson",
     role: "Product Manager",
     mutualConnections: 20,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
+    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Sarah Davis",
     role: "UX Designer",
     mutualConnections: 15,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
+    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "David Lee",
     role: "Data Analyst",
     mutualConnections: 7,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
+    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Emily White",
     role: "Marketing Specialist",
     mutualConnections: 11,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
+    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Alex Wilson",
     role: "Frontend Developer",
     mutualConnections: 9,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
+    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Olivia Brown",
     role: "Project Manager",
     mutualConnections: 14,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
+    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Daniel Clark",
     role: "Software Architect",
     mutualConnections: 18,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
+    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Sophia Martinez",
     role: "Data Engineer",
     mutualConnections: 6,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
+    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
   },
   {
-    name: "Matthew Anderson",
+    name: "Matthew ",
     role: "Sales Manager",
     mutualConnections: 12,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
+    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Ella Thomas",
     role: "Graphic Designer",
     mutualConnections: 10,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
+    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
   },
 ];
 
@@ -107,12 +120,25 @@ MyNetwork.getLayout = function getLayout(page) {
     <IconMenu />
   </div>;
 
-  const second = <section style={{
-    background: 'white',
-    borderRadius: '8px',
-    padding: '10px 16px 10px 16px',
-    // width: '100%',
-    border: '1px solid rgba(140, 140, 140,0.3)',
+  const second = <>
+  <div  style={{
+     background: 'white',
+     borderRadius: '8px',
+     padding: '10px 16px 10px 16px',
+     flexDirection:'column',
+     border: '1px solid rgba(140, 140, 140,0.3)',
+  }}>
+
+    <div style={{ display:'flex',
+    justifyContent:'space-between',
+    alignItems:'center',marginBottom:'16px'}}>
+  <p>People you may know from BMS Institute of Technology and Management</p>
+<button style={{outline:'transparent',border:'none'}}>See all</button>
+    </div>
+  
+ 
+<section style={{
+   
     display:'grid',
     gap:'8px',
     gridTemplateColumns:'repeat(4,1fr)',
@@ -121,7 +147,10 @@ MyNetwork.getLayout = function getLayout(page) {
 {connectionData?.map((item,i)=>{
   return <ConnectionItem key={i} data={item}/>
 })}
-  </section>;
+  </section>
+
+  </div>
+  </>;
 
   return (
     <TwoColumnLayout
