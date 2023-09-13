@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { FaUserAlt } from 'react-icons/fa';
+import { IoClose } from 'react-icons/io5';
 
 function BanneredImage({ url, bannerUrl ,size=4}) {
   return (<div style={{
@@ -23,7 +24,21 @@ function BanneredImage({ url, bannerUrl ,size=4}) {
         }} />}
     </div>
 
-
+        <div style={{
+      background: 'rgba(0,0,0,0.6)',
+      color:'white',
+      position: 'absolute',
+      borderRadius:'100px',
+      padding:'2px',
+     top:10,
+     right:10,
+     display:'flex',
+     alignItems:'center',
+     justifyContent:'center'
+        }}
+      >
+          <IoClose/>
+        </div>
 
     <div style={{
 
