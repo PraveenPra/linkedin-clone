@@ -3,9 +3,10 @@ import IconMenu from '@/components/MenuComponents/iconMenu'
 import BanneredImage from '@/components/ImageComponents/banneredImage'
 import React from 'react'
 
-import {  CgUserAdd } from 'react-icons/cg';
+import { CgUserAdd } from 'react-icons/cg';
 import EmptyAvatar from '@/components/ImageComponents/emptyAvatar';
 import ConnectionItem from '@/components/connectionItem';
+import GroupItem from '@/components/groupItem';
 function MyNetwork() {
   return (
     <div>
@@ -16,97 +17,124 @@ function MyNetwork() {
 
 export default MyNetwork
 
+const groupsData = [
+  {
+    name: "Test automation",
+    count: "211,330",
+    profileImage: "https://source.unsplash.com/random/200x200/?logo&1",
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner&1"
+  },
+  {
+    name: "Javascript",
+    count: "450,230",
+    profileImage: "https://source.unsplash.com/random/200x200/?logo&2",
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner&2"
+  },
+  {
+    name: "Geeks for Geeks",
+    count: "20,570",
+    profileImage: "https://source.unsplash.com/random/200x200/?profile&3",
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner&3"
+  },
+  {
+    name: "Machine learning",
+    count: "906,380",
+    profileImage: "https://source.unsplash.com/random/200x200/?logo&4",
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner&4"
+  },
+]
+
 const connectionData = [
   {
     name: "Aditya R",
     role: "AI Intern",
     mutualConnections: 13,
     profileImage: "https://source.unsplash.com/random/200x200/?profile&1",
-    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "John Doe",
     role: "Software Engineer",
     mutualConnections: 8,
     profileImage: "https://source.unsplash.com/random/200x200/?profile&2",
-    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Jane Smith",
     role: "Data Scientist",
     mutualConnections: 5,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
-    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Michael Johnson",
     role: "Product Manager",
     mutualConnections: 20,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
-    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Sarah Davis",
     role: "UX Designer",
     mutualConnections: 15,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
-    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "David Lee",
     role: "Data Analyst",
     mutualConnections: 7,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
-    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Emily White",
     role: "Marketing Specialist",
     mutualConnections: 11,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
-    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Alex Wilson",
     role: "Frontend Developer",
     mutualConnections: 9,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
-    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Olivia Brown",
     role: "Project Manager",
     mutualConnections: 14,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
-    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Daniel Clark",
     role: "Software Architect",
     mutualConnections: 18,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
-    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Sophia Martinez",
     role: "Data Engineer",
     mutualConnections: 6,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
-    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Matthew ",
     role: "Sales Manager",
     mutualConnections: 12,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
-    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner"
   },
   {
     name: "Ella Thomas",
     role: "Graphic Designer",
     mutualConnections: 10,
     profileImage: "https://source.unsplash.com/random/200x200/?profile",
-    bannerImage:"https://source.unsplash.com/random/1024x768/?banner"
+    bannerImage: "https://source.unsplash.com/random/1024x768/?banner"
   },
 ];
 
@@ -121,35 +149,56 @@ MyNetwork.getLayout = function getLayout(page) {
   </div>;
 
   const second = <>
-  <div  style={{
-     background: 'white',
-     borderRadius: '8px',
-     padding: '10px 16px 10px 16px',
-     flexDirection:'column',
-     border: '1px solid rgba(140, 140, 140,0.3)',
-  }}>
+    <div style={{
+      background: 'white',
+      borderRadius: '8px',
+      padding: '10px 16px 10px 16px',
+      flexDirection: 'column',
+      border: '1px solid rgba(140, 140, 140,0.3)',
+    }}>
 
-    <div style={{ display:'flex',
-    justifyContent:'space-between',
-    alignItems:'center',marginBottom:'16px'}}>
-  <p>People you may know from BMS Institute of Technology and Management</p>
-<button style={{outline:'transparent',border:'none'}}>See all</button>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center', margin: '16px 0'
+      }}>
+        <p>People you may know from BMS Institute of Technology and Management</p>
+        <button style={{ outline: 'transparent', border: 'none' }}>See all</button>
+      </div>
+
+
+      <section style={{
+
+        display: 'grid',
+        gap: '8px',
+        gridTemplateColumns: 'repeat(4,1fr)',
+      }}>
+
+        {connectionData?.map((item, i) => {
+          return <ConnectionItem key={i} data={item} />
+        })}
+      </section>
+
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center', margin: '16px 0'
+      }}>
+        <p>Groups you may be interested in</p>
+        <button style={{ outline: 'transparent', border: 'none' }}>See all</button>
+      </div>
+
+      <section style={{
+        display: 'grid',
+        gap: '8px',
+        gridTemplateColumns: 'repeat(4,1fr)',
+      }}>
+
+        {groupsData?.map((item, i) => {
+          return <GroupItem key={i} data={item} />
+        })}
+      </section>
     </div>
-  
- 
-<section style={{
-   
-    display:'grid',
-    gap:'8px',
-    gridTemplateColumns:'repeat(4,1fr)',
-  }}>
-
-{connectionData?.map((item,i)=>{
-  return <ConnectionItem key={i} data={item}/>
-})}
-  </section>
-
-  </div>
   </>;
 
   return (
