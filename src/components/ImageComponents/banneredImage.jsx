@@ -2,7 +2,7 @@ import React from 'react'
 
 import { FaUserAlt } from 'react-icons/fa';
 
-function BanneredImage({ url, bannerUrl }) {
+function BanneredImage({ url, bannerUrl ,size=4}) {
   return (<div style={{
 
     position: 'relative',
@@ -28,8 +28,8 @@ function BanneredImage({ url, bannerUrl }) {
     <div style={{
 
       position: 'absolute',
-      gridColumn: 2,
-      transform: 'translate(20%,20%)',
+      // gridColumn: 2,
+      transform: 'translate(30%,10%)',
       background: '#f5f7f9',
       padding: url == undefined && '1em',//if no image then use icon
       color: 'black',
@@ -37,8 +37,8 @@ function BanneredImage({ url, bannerUrl }) {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      width: '4em',
-      height: '4em',
+      width: size+'em',
+      height: size+'em',
       border: '2px solid white'
     }}>
       {url !== undefined ?

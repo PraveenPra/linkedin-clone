@@ -15,9 +15,9 @@ function ConnectionItem({data}) {
     border: '1px solid rgba(140, 140, 140,0.3)',
     textAlign:'center'
   }}>
-    <BanneredImage url={profileImage} bannerUrl={bannerImage}/>
+    <BanneredImage url={profileImage} bannerUrl={bannerImage} size={6}/>
 
-    <h3 style={{ padding: '0px 16px' }}>{name}</h3>
+    <h3 style={{ padding: '0px 16px',marginTop:'20px' }}>{name}</h3>
     <p style={{ padding: '0px 16px' }} className='plight'>{role}</p>
 
     <div style={{
