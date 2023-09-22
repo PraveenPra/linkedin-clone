@@ -50,3 +50,57 @@
         fontWeight:400;
         /* color: isActiveLink ? 'black' : '#666666', */
       }
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+.nav{
+    padding: 0 16px;
+    height: 100px;
+    grid-template-columns:  repeat(8, 1fr);      
+}
+
+.imgContainer{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    /* grid-column: 1 / 2; */
+    padding: 4px ;
+    border:1px solid red;
+  }
+
+.logo{
+    /* object-fit: cover; */
+    width: 100%;
+    height: 100%
+  }
+
+  .search{
+    grid-column:span 1;
+}
+
+
+.li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* grid-column: span 2; */
+    /* border-bottom:isActiveLink  ? '2px solid black' : none; */
+    cursor: pointer;
+  }
+
+  .optionIcon{ 
+    width: 20px;
+     height: 20px;
+     /* color: isActiveLink ? 'black' : '#666666', */
+     }
+
+     .optionName{
+       display:none;
+        /* color: isActiveLink ? 'black' : '#666666', */
+      }
+}
