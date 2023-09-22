@@ -1,39 +1,22 @@
 import React from 'react'
 import Navbar from '../NavComponents/Navbar'
+import sx from './ThreeColumnLayout.module.css'
 
 function ThreeColumnLayout({ first, second, third }) {
     return (<>
         <Navbar />
-        <div style={{
-            margin: '24px 118px',
-            display: 'grid',
-            gridTemplateColumns: '225px auto 275px',
-            gridGap: '24px',
-            paddingTop: '53px',
-        }}>
+        <div className={sx.container}>
 
-            <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '8px',
-            }}>
+            <div className={sx.first}>
                 {first}
             </div>
 
 
-            <main style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '8px',
-            }}>
+            <main className={sx.second}>
                 {second}
             </main>
 
-            <aside style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '8px',
-            }}>
+            <aside className={sx.third}>
                 {third}
             </aside>
 

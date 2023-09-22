@@ -1,0 +1,25 @@
+.container{
+    margin: 24px 118px;
+    display: grid;
+    grid-template-columns: 225px auto 275px;
+    grid-gap: 24px;
+    padding-top: 53px;
+}
+
+.first{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.second{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.third{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
