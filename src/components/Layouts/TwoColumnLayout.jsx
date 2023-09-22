@@ -1,31 +1,18 @@
 import React from 'react'
 import Navbar from '../NavComponents/Navbar'
+import sx from './TwoColumnLayout.module.css'
 
 function TwoColumnLayout({ first, second}) {
   return (<>
     <Navbar />
-    <div style={{
-        margin: '24px 118px',
-        display: 'grid',
-        gridTemplateColumns: '265px auto',
-        gridGap: '24px',
-        paddingTop: '53px',
-    }}>
+    <div className={sx.container}>
 
-        <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '8px',
-        }}>
+        <div className={sx.first}>
             {first}
         </div>
 
 
-        <main style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '8px',
-        }}>
+        <main className={sx.second}>
             {second}
         </main>
         </div>

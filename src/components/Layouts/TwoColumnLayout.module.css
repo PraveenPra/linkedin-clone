@@ -1,0 +1,30 @@
+.container{
+    margin: 24px 118px;
+    display: grid;
+    grid-template-columns: 265px auto;
+    grid-gap: 24px;
+    padding-top: 53px;
+}
+
+.first{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.second{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container{
+        margin: 24px 16px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 24px;
+        padding-top: 53px;
+    }
+}
