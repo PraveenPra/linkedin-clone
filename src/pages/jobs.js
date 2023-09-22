@@ -1,5 +1,5 @@
 import PostInputField from '@/components/InputComponents/postInputField'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/NavComponents/Navbar'
 import AsideJobs from '@/components/asideJobs'
 import CreatePost from '@/components/createPost'
 import JobsList from '@/components/jobsList'

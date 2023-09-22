@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../Navbar'
+import Navbar from '../NavComponents/Navbar'
 
 function ThreeColumnLayout({ first, second, third }) {
     return (<>

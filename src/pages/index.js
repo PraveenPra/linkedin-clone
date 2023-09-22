@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 import sx from '@/styles/Home.module.css'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/NavComponents/Navbar'
 import { RiTeamLine } from 'react-icons/ri';
 import { FaBookmark, FaUserAlt } from 'react-icons/fa';
 import ProfileSummary from '@/components/profileSummary';
