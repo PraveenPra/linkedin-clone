@@ -183,11 +183,7 @@ MyNetwork.getLayout = function getLayout(page) {
         <button style={{ outline: 'transparent', border: 'none' }}>See all</button>
       </div>
 
-      <section style={{
-        display: 'grid',
-        gap: '8px',
-        gridTemplateColumns: 'repeat(4,1fr)',
-      }}>
+      <section className={sx.connGrid}>
 
         {groupsData?.map((item, i) => {
           return <GroupItem key={i} data={item} />
