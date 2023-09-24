@@ -1,0 +1,14 @@
+.connGrid{
+    display: grid;
+    gap: 8px;
+    gridTemplateColumns: repeat(4,1fr);
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .connGrid{
+        display: grid;
+        gap: 8px;
+        gridTemplateColumns: repeat(2,1fr);
+      }
+}

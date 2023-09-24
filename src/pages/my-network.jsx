@@ -2,7 +2,7 @@ import TwoColumnLayout from '@/components/Layouts/TwoColumnLayout'
 import IconMenu from '@/components/MenuComponents/iconMenu'
 import BanneredImage from '@/components/ImageComponents/banneredImage'
 import React from 'react'
-
+import sx from './my-network.module.css'
 import { CgUserAdd } from 'react-icons/cg';
 import EmptyAvatar from '@/components/ImageComponents/emptyAvatar';
 import ConnectionItem from '@/components/connectionItem';
@@ -167,12 +167,7 @@ MyNetwork.getLayout = function getLayout(page) {
       </div>
 
 
-      <section style={{
-
-        display: 'grid',
-        gap: '8px',
-        gridTemplateColumns: 'repeat(4,1fr)',
-      }}>
+      <section className={sx.connGrid}>
 
         {connectionData?.map((item, i) => {
           return <ConnectionItem key={i} data={item} />
