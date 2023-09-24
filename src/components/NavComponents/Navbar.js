@@ -9,11 +9,11 @@ import { FaBell } from 'react-icons/fa';
 import { useRouter } from 'next/router'
 
 const icons = [
-    { icon: <BiSolidHome/>, title: 'Home' ,link:'/'},
-    { icon: <FaUserGroup/>, title: 'My Network' ,link:'/my-network'},
-    { icon: <FaBriefcase/>, title: 'Jobs' ,link:'/jobs'},
-    { icon: <HiChatBubbleLeftEllipsis/>, title: 'Messaging',link:'/messaging' },
-    { icon: <FaBell/>, title: 'Notifications' ,link:'/notifications'},
+    { icon: <BiSolidHome className={sx.optionIcon}/>, title: 'Home' ,link:'/'},
+    { icon: <FaUserGroup className={sx.optionIcon}/>, title: 'My Network' ,link:'/my-network'},
+    { icon: <FaBriefcase className={sx.optionIcon}/>, title: 'Jobs' ,link:'/jobs'},
+    { icon: <HiChatBubbleLeftEllipsis className={sx.optionIcon}/>, title: 'Messaging',link:'/messaging' },
+    { icon: <FaBell className={sx.optionIcon}/>, title: 'Notifications' ,link:'/notifications'},
   ]
   
 const Navbar = () => {
@@ -42,7 +42,7 @@ const Navbar = () => {
           onClick={()=>router.push(item?.link)}
           >
 
-            <div className={sx.optionIcon}>
+            <div>
              {item?.icon}
             </div>
             <p className={sx.optionName}>{item.title}</p>
