@@ -149,20 +149,14 @@ MyNetwork.getLayout = function getLayout(page) {
   </div>;
 
   const second = <>
-    <div style={{
-      background: 'white',
-      borderRadius: '8px',
-      padding: '10px 16px 10px 16px',
-      flexDirection: 'column',
-      border: '1px solid rgba(140, 140, 140,0.3)',
-    }}>
+    <div className={sx.container}>
 
       <div style={{
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center', margin: '16px 0'
       }}>
-        <p>People you may know from BMS Institute of Technology and Management</p>
+        <p className={sx.gridHeaderText}>People you may know from BMS Institute of Technology and Management</p>
         <button style={{ outline: 'transparent', border: 'none' }}>See all</button>
       </div>
 
@@ -179,7 +173,7 @@ MyNetwork.getLayout = function getLayout(page) {
         justifyContent: 'space-between',
         alignItems: 'center', margin: '16px 0'
       }}>
-        <p>Groups you may be interested in</p>
+        <p className={sx.gridHeaderText}>Groups you may be interested in</p>
         <button style={{ outline: 'transparent', border: 'none' }}>See all</button>
       </div>
 
