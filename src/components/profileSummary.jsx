@@ -9,7 +9,7 @@ function ProfileSummary() {
       background: 'white',
       borderRadius: '8px',
       padding: '0px 0px 0px 0px',
-      width: 'fit-content',
+      width: '100%',
       border: '1px solid rgba(140, 140, 140,0.3)',
     }}>
 
