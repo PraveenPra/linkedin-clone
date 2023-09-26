@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../NavComponents/Navbar'
-import sx from './TwoColumnLayout.module.css'
+import sx from './TwoColumnLayout.module.scss'
 
 function TwoColumnLayout({ first, second}) {
   return (<>
