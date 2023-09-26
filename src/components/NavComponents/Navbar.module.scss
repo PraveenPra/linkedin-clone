@@ -32,10 +32,7 @@
 }
 
 .li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+ @include center-col;
   grid-column: span 2;
   /* border-bottom:isActiveLink  ? '2px solid black' : none; */
   cursor: pointer;
@@ -62,9 +59,7 @@
   }
 
   .imgContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center;
     width: 42px;
     height: 42px;
     /* grid-column: 1 / 2; */
@@ -82,17 +77,6 @@
     grid-column: span 1;
   }
 
-
-  .li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* grid-column: span 2; */
-    /* border-bottom:isActiveLink  ? '2px solid black' : none; */
-    cursor: pointer;
-    /* border:1px solid red; */
-  }
 
   .optionIcon {
     width: 24px;

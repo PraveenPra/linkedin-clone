@@ -1,5 +1,12 @@
-@mixin bag {
-    background-color: red;
+@mixin center {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center-col{
+    @include center;
+    flex-direction: column;
 }
 
 @mixin on-mobiles{
