@@ -1,6 +1,6 @@
 import React from 'react'
 import InputField from '../InputComponents/searchInputField'
-import sx from './Navbar.module.css'
+import sx from './Navbar.module.scss'
 import { BiSolidHome } from 'react-icons/bi';
 import { FaUserGroup,FaBriefcase } from 'react-icons/fa6';
 import {HiChatBubbleLeftEllipsis} from 'react-icons/hi2';

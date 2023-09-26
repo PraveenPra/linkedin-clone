@@ -1,3 +1,5 @@
+@import '@/styles/_mixins.scss';
+
 .container{
     background: white;
     border-radius: 8px;
@@ -13,8 +15,7 @@
   }
 
   
-  /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+  @include on-mobiles{
     .connGrid{
         display: grid;
         gap: 8px;
