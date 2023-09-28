@@ -1,5 +1,5 @@
 import React from 'react'
-import sx from './searchInputField.module.css'
+import sx from './searchInputField.module.scss'
 
 const SearchInputField = () => {
     return (

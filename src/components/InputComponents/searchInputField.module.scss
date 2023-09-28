@@ -1,3 +1,6 @@
+
+@import '@/styles/_mixins.scss';
+
 .wrapper {
     position:relative;
   }
@@ -25,3 +28,18 @@
     margin: 8px 0px;
     background: #eef3f8;
   }
+
+  
+@include on-mobiles {
+  .icon {
+    height: 24px;
+    width: 24px;
+    left:0;
+    padding:0;
+  }
+
+  
+  .input {
+    background:#fff;
+  }
+}
