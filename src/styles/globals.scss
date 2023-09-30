@@ -2,18 +2,24 @@
 
 
 
-root:{
-    --col-primary:#0075b4;
-    --col-bg:#f3f2ef;
-    --col-on-bg:#fff;
-    --col-border:rgb(140, 140, 140);
-}
+// root:{
+//     --col-primary:#0075b4;
+//     --col-bg:#f3f2ef;
+//     --col-on-bg:#fff;
+//     --col-border:rgb(140, 140, 140);
+// }
+$col-primary : #0075b4;
+$col-bg : #f3f2ef;
+$col-on-bg : #fff;
+$col-border : rgb(140, 140, 140);
+
+$font-primary:Ubuntu, Work Sans;
 
 html,body{
-    background:#f3f2ef;
+    background:$col-bg;
     padding:0;
     margin:0;
-    font-family:Ubuntu, Work Sans;
+    font-family:$font-primary;
 }
 
 *{
@@ -80,22 +86,6 @@ a{
     color:rgba(0,0,0,0.6);
 }
 
-//colors
-.col-pri{
-    color:var(--col-primary);
-}
-
-.col-bg{
-    color:var(--col-bg);
-}
-
-.col-on-bg{
-    color:var(--col-on-bg);
-}
-
-.col-border{
-    color:var(--col-border);
-}
 
 //helpers
 .center{
