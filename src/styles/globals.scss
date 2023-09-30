@@ -85,17 +85,3 @@ a{
     line-height:12px;
     color:rgba(0,0,0,0.6);
 }
-
-
-//helpers
-.center{
-    display:flex;
-    justifyContent:center;
-    alignItems:center;
-}
-
-.justify-between{
-    display:flex;
-    justifyContent:space-between;
-    alignItems:center;
-}
